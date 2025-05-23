@@ -1,5 +1,7 @@
 document.querySelector("#flag").onclick = copy;
 
+let flagDimensions = [1360, 480]
+
 let flags = {
     trans: [
         "#5BCFFB",
@@ -29,6 +31,12 @@ let flags = {
         "#ABABAB",
         "#000000"
     ],
+    enby: [
+        "#FCF434",
+        "#FFFFFF",
+        "#9C59D1",
+        "#2C2C2C"
+    ],
     genderfluid: [
         "#FE76A2",
         "#FFFFFF",
@@ -40,19 +48,27 @@ let flags = {
 
 
 function copy() {
-    html2canvas(document.querySelector("#capture")).then(canvas => {
+    html2canvas(document.querySelector("#flag")).then(canvas => {
         canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]))
     });
 }
 
 function buildFlag(leftFlag, rightFlag) {
     document.querySelector("#flag").innerHTML = ""
-    for (let i = 0; i < lcm(leftFlag.length, rightFlag.length); i++) {
-        document.querySelector("#flag").append(`<div class="stripe" style="background: inear-gradient(in oklab 90deg, ${leftFlag[i / leftFlag.length]} 20%, ${rightFlag[i / rightFlag.length]} 80%);">`)
+    let numStripes = lcm(leftFlag.length, rightFlag.length);
+    for (let i = 0; i < numStripes; i++) {
+        document.querySelector("#flag").innerHTML += `<div 
+        class="stripe" 
+        style="width:${flagDimensions[0]}px;
+        height:${flagDimensions[1] / numStripes}px;
+        background: linear-gradient(in oklab 90deg, 
+            ${leftFlag[Math.floor(leftFlag.length * (i / numStripes))]} 20%,
+            ${rightFlag[Math.floor(rightFlag.length * (i / numStripes))]} 80%
+            );"></div>`;
     }
 }
 
-buildFlag(flags.trans, flags.lesbian);
+buildFlag(flags.trans, flags.enby);
 
 
 function gcd(a, b) {
