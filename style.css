@@ -1,33 +1,8 @@
-div{width: fit-content;}
-.stripe {width:1360px;height:96px;}
-:root {
-    --flag1-stripe1:#5BCFFB; 
-    --flag1-stripe2:#F5ABB9; 
-    --flag1-stripe3:#FFFFFF; 
-    --flag1-stripe4:#F5ABB9; 
-    --flag1-stripe5:#5BCFFB; 
+#flag {
+    width: fit-content;
+}
 
-    --flag1-stripe1:#FE76A2; 
-    --flag1-stripe2:#FFFFFF; 
-    --flag1-stripe3:#BF12D7; 
-    --flag1-stripe4:#000000; 
-    --flag1-stripe5:#303CBE; 
-
-    --flag2-stripe1:#D62800;
-    --flag2-stripe2:#FF9B56;
-    --flag2-stripe3:#FFFFFF;
-    --flag2-stripe4:#D462A6;
-    --flag2-stripe5:#A40062;
-
-    --flag2-stripe1:#D60270;
-    --flag2-stripe2:#D60270;
-    --flag2-stripe3:#9B4F96;
-    --flag2-stripe4:#0038A8;
-    --flag2-stripe5:#0038A8;
-
-    --flag2-stripe1:#3BA740;
-    --flag2-stripe2:#A8D47A;
-    --flag2-stripe3:#FFFFFF;
-    --flag2-stripe4:#ABABAB;
-    --flag2-stripe5:#000000;
+.stripe {
+    width: 1360px;
+    height: 96px;
 }

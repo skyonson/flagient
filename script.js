@@ -39,10 +39,6 @@ let flags = {
 }
 
 
-let flag1 = flags.trans;
-let flag2 = flags.lesbian;
-
-
 function copy() {
     html2canvas(document.querySelector("#capture")).then(canvas => {
         canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]))
@@ -50,15 +46,13 @@ function copy() {
 }
 
 function buildFlag(leftFlag, rightFlag) {
-            document.querySelector("#flag").innerHTML = ""
+    document.querySelector("#flag").innerHTML = ""
     for (let i = 0; i < lcm(leftFlag.length, rightFlag.length); i++) {
-        let stripe = document.createElement("div")
-        stripe.style.background = `linear-gradient(in oklab 90deg, ${leftFlag[i / leftFlag.length]} 20%, ${rightFlag[i / rightFlag.length]} 80%);`
-        document.querySelector("#flag").appendChild(stripe)
+        document.querySelector("#flag").append(`<div class="stripe" style="background: inear-gradient(in oklab 90deg, ${leftFlag[i / leftFlag.length]} 20%, ${rightFlag[i / rightFlag.length]} 80%);">`)
     }
 }
 
-buildFlag(flag1, flag2);
+buildFlag(flags.trans, flags.lesbian);
 
 
 function gcd(a, b) {
