@@ -1,11 +1,30 @@
 <html>
-    <head>
-        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-        <script src="script.js" defer></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="flag">
+
+<head>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <select name="leftFlag" id="leftFlagPreset" onchange="updateFlags()">
+            </select>
+            <div id="dimensions">
+                <input type="number" name="dimensions" id="flagWidth" min="2" value="1360" max="65535" step="1"
+                    onchange="updateFlags()">
+                <div style="margin-inline: 4px;">X</div>
+                <input type="number" name="dimensions" id="flagHeight" min="2" value="480" max="65535" step="1"
+                    onchange="updateFlags()">
+            </div>
+            <select name="rightFlag" id="rightFlagPreset" onchange="updateFlags()">
+            </select>
         </div>
-    </body>
+        <canvas id="flagDisplay"></canvas>
+    </div>
+    <div id="flag">
+    </div>
+</body>
+
 </html>

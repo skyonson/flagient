@@ -1,7 +1,45 @@
 #flag {
     width: fit-content;
+    position: absolute;
+    left: 100%;
+}
+
+.container {
+    margin: auto;
+    width: fit-content;
+    display: grid;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+}
+#dimensions {
+    display: flex;
+    margin-inline: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#flagDisplay {
+    max-width: 100%;
+    margin-top: 8px;
+    margin-inline: auto;
+    max-height: fit-content;
 }
 
 .stripe {
-    width: 1360px;
+    border: none;
+    width: var(--stripeWidth);
+    height: var(--stripeHeight);
+    margin-bottom: -1px;
+}
+
+:root {
+    --leftFlagPercent:20%;
+    --rightFlagPercent:80%;
+    --stripeWidth:1360px;
+    --stripeHeight:96;
 }
