@@ -52,7 +52,7 @@ const flags = {
             "#C479A0",
             "#ECA6CB",
             "#D5C7E8",
-            "#000000",
+            "#FFFFFF",
             "#D5C7E8",
             "#9AC7E7",
             "#6C83CF"
