@@ -15,6 +15,18 @@ function lcm(a, b) {
 }
 
 const flags = {
+    agender: {
+        displayName:"Agender",
+        stripes:[
+            "#000000",
+            "#B9B9B9",
+            "#FFFFFF",
+            "#B7F484",
+            "#FFFFFF",
+            "#B9B9B9",
+            "#000000"
+        ]
+    },
     aromantic: {
         displayName:"Aromantic",
         stripes:[
@@ -23,6 +35,27 @@ const flags = {
             "#FFFFFF",
             "#ABABAB",
             "#000000"
+        ]
+    },
+    asexual: {
+        displayName:"Asexual",
+        stripes:[
+            "#010101",
+            "#a0a0a0",
+            "#FFFFFF",
+            "#9A0678"
+        ]
+    },
+    bigender: {
+        displayName:"Bigender",
+        stripes:[
+            "#C479A0",
+            "#ECA6CB",
+            "#D5C7E8",
+            "#000000",
+            "#D5C7E8",
+            "#9AC7E7",
+            "#6C83CF"
         ]
     },
     bisexual: {
@@ -35,43 +68,91 @@ const flags = {
             "#0038A8"
         ]
     },
+    demigender: {
+        displayName:"Demigender",
+        stripes:[
+            "#7F7F7F",
+            "#C3C3C3",
+            "#FBFF74",
+            "#FFFFFF",
+            "#FBFF74",
+            "#C3C3C3",
+            "#7F7F7F"
+        ]
+    },
     enby: {
         displayName:"Nonbinary",
         stripes:[
-            "#FCF434",
+            "#F5EA2A",
             "#FFFFFF",
-            "#9C59D1",
-            "#2C2C2C"
+            "#9A59CF",
+            "#2D2D2D"
+        ]
+    },
+    gay: {
+        displayName:"Gay",
+        stripes:[
+            "#078E70",
+            "#26CFAA",
+            "#98E9C1",
+            "#FFFFFF",
+            "#7BADE2",
+            "#5049CB",
+            "#3D1A77"
         ]
     },
     genderfluid: {
         displayName:"Genderfluid",
         stripes:[
-            "#FE76A2",
+            "#FE75A1",
+            "#F5F5F5",
+            "#BF17D5",
+            "#2C2C2C",
+            "#323EBC"
+        ]
+    },
+    genderqueer: {
+        displayName:"Genderqueer",
+        stripes:[
+            "#B899DD",
             "#FFFFFF",
-            "#BF12D7",
-            "#000000",
-            "#303CBE"
+            "#6B8E3A"
         ]
     },
     lesbian: {
         displayName:"Lesbian",
         stripes:[
-            "#D62800",
-            "#FF9B56",
+            "#D62C00",
+            "#FF9956",
             "#FFFFFF",
-            "#D462A6",
-            "#A40062"
+            "#D362A4",
+            "#A40162"
+        ]
+    },
+    pansexual: {
+        displayName:"Pansexual",
+        stripes:[
+            "#FF218C",
+            "#FFD800",
+            "#20B2FE"
+        ]
+    },
+    polysexual: {
+        displayName:"Polysexual",
+        stripes:[
+            "#F61CB9",
+            "#06D569",
+            "#1C92F6"
         ]
     },
     trans: {
         displayName:"Transgender",
         stripes:[
-            "#5BCFFB",
-            "#F5ABB9",
+            "#5BCFF9",
+            "#F5A8B8",
             "#FFFFFF",
-            "#F5ABB9",
-            "#5BCFFB"
+            "#F5A8B8",
+            "#5BCFF9"
         ]
     } 
 }
