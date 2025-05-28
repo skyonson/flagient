@@ -34,7 +34,7 @@ body {
     border: none;
     width: var(--stripeWidth);
     height: var(--stripeHeight);
-    margin-bottom: -1px;
+    margin-top: -3px;
 }
 
 :root {

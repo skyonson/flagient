@@ -176,7 +176,7 @@ function buildStripes(leftFlag, rightFlag) {
             );"></div>`;
     }
     document.querySelector(":root").style.setProperty(`--stripeWidth`, `${document.getElementById("flagWidth").value}px`);
-    document.querySelector(":root").style.setProperty(`--stripeHeight`, `${(document.getElementById("flagHeight").value / numStripes) + 1}px`);
+    document.querySelector(":root").style.setProperty(`--stripeHeight`, `${(document.getElementById("flagHeight").value / numStripes) + 3.1}px`);
 }
 
 function setColors(leftFlag, rightFlag) {
@@ -202,14 +202,14 @@ function updateFlags() {
     let leftFlag = document.getElementById("leftFlagPreset").value; 
     let rightFlag = document.getElementById("rightFlagPreset").value;
     buildStripes(flags[leftFlag].stripes, flags[rightFlag].stripes);
-    setColors(flags[leftFlag].stripes, flags[rightFlag].stripes)
+    setColors(flags[leftFlag].stripes, flags[rightFlag].stripes);
     html2canvas(document.querySelector("#flag")).then(canvas => {
         let flagDisplay = document.getElementById("flagDisplay");
-        flagDisplay.width = canvas.width
-        flagDisplay.height = canvas.height
+        flagDisplay.width = canvas.width;
+        flagDisplay.height = document.getElementById("flagHeight").value;
         flagDisplay.getContext("2d").drawImage(canvas,0,0);
     });
 }
 
-setupFlagLists(flags)
-updateFlags()
+setupFlagLists(flags);
+updateFlags();
