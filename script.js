@@ -159,7 +159,7 @@ const flags = {
 
 
 function copy() {
-    html2canvas(document.querySelector("#flag")).then(canvas => {
+    html2canvas(document.querySelector("#flag"), {scale:1,width:document.getElementById("flagWidth").value, height:document.getElementById("flagHeight").value}).then(canvas => {
         canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]))
     });
 }
@@ -203,9 +203,9 @@ function updateFlags() {
     let rightFlag = document.getElementById("rightFlagPreset").value;
     buildStripes(flags[leftFlag].stripes, flags[rightFlag].stripes);
     setColors(flags[leftFlag].stripes, flags[rightFlag].stripes);
-    html2canvas(document.querySelector("#flag")).then(canvas => {
+    html2canvas(document.querySelector("#flag"), {scale:1,width:document.getElementById("flagWidth").value, height:document.getElementById("flagHeight").value}).then(canvas => {
         let flagDisplay = document.getElementById("flagDisplay");
-        flagDisplay.width = canvas.width;
+        flagDisplay.width = document.getElementById("flagWidth").value;
         flagDisplay.height = document.getElementById("flagHeight").value;
         flagDisplay.getContext("2d").drawImage(canvas,0,0);
     });
